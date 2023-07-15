@@ -1,4 +1,6 @@
+#pragma once
+#include "valve/client/C_BasePlayer.h"
 namespace g
 {
-	inline void* localPlayer;
+	inline C_BasePlayer* localPlayer;
 }

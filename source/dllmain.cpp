@@ -1,14 +1,13 @@
-#include "includes.h"
-
+#include "libs.h"
+#include "sdk/interfaces.h"
 #include "hooks/hooks.h"
-#include "sdk/interfaces/interfaces.h"
 
 DWORD WINAPI Setup(LPVOID lpParam)
 {
-	AllocConsole();
+	/*AllocConsole();
 	freopen_s(reinterpret_cast<_iobuf**>(__acrt_iob_func(0)), "conin$", "r", static_cast<_iobuf*>(__acrt_iob_func(0)));
 	freopen_s(reinterpret_cast<_iobuf**>(__acrt_iob_func(1)), "conout$", "w", static_cast<_iobuf*>(__acrt_iob_func(1)));
-	freopen_s(reinterpret_cast<_iobuf**>(__acrt_iob_func(2)), "conout$", "w", static_cast<_iobuf*>(__acrt_iob_func(2)));
+	freopen_s(reinterpret_cast<_iobuf**>(__acrt_iob_func(2)), "conout$", "w", static_cast<_iobuf*>(__acrt_iob_func(2)));*/
 
 	interfaces::setup();
 	hooks::load();
@@ -18,11 +17,11 @@ DWORD WINAPI Setup(LPVOID lpParam)
 
 	hooks::unload();
 
-	fclose(static_cast<_iobuf*>(__acrt_iob_func(0)));
+	/*fclose(static_cast<_iobuf*>(__acrt_iob_func(0)));
 	fclose(static_cast<_iobuf*>(__acrt_iob_func(1)));
 	fclose(static_cast<_iobuf*>(__acrt_iob_func(2)));
 
-	FreeConsole();
+	FreeConsole();*/
 
 	FreeLibraryAndExitThread(static_cast<HMODULE>(lpParam), EXIT_SUCCESS);
 }

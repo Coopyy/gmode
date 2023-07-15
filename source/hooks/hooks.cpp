@@ -1,10 +1,14 @@
+#include "../libs.h"
+
 #include "hooks.h"
 #include "../../external/minhook/MinHook.h"
-#include "../memory/memory.h"
-#include "../sdk/interfaces/interfaces.h"
+#include "../memory.h"
 #include "../globals.h"
 
+#include "../sdk.h"
+#include "../sdk/interfaces.h"
 #include "../cheats/aimbot.h"
+
 
 void hooks::load()
 {
@@ -29,19 +33,11 @@ void hooks::unload()
 	MH_Uninitialize();
 }
 
-bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd)
+bool __stdcall hooks::CreateMove(void* cm, float frameTime, CUserCmd* cmd)
 {
-	CreateMoveOriginal(interfaces::clientMode, frameTime, cmd);
+	g::localPlayer = (C_BasePlayer*)interfaces::entityList->GetClientEntity(interfaces::engineClient->GetLocalPlayer());
+	if (cmd && g::localPlayer)
+		aimbot::run(cmd);
 
-	/*if (!cmd || !cmd->command_number)
-		return false;*/
-
-	g::localPlayer = interfaces::entityList->GetEntityFromIndex(interfaces::engineClient->GetLocalPlayerIndex());
-
-	if (!g::localPlayer)
-		return false;
-
-	aimbot::run(cmd);
-
-	return false;
+	return CreateMoveOriginal(cm, frameTime, cmd);;
 }

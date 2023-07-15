@@ -33,16 +33,25 @@
     <ClCompile Include="external\minhook\trampoline.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\hooks\hooks.cpp">
+    <ClCompile Include="source\valve\tier1\KeyValues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\sdk\interfaces\interfaces.cpp">
+    <ClCompile Include="source\hooks\hooks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\cheats\aimbot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\sdk\CBasePlayer.h">
+    <ClCompile Include="source\sdk\interfaces.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\easing\easing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\easing\easing_dynamic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\valve\vguimatsurface\CMatSystemSurface.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,37 +80,184 @@
     <ClInclude Include="external\minhook\trampoline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\hooks\hooks.h">
+    <ClInclude Include="source\memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\sdk\CUserCmd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\sdk\Vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\memory\memory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\sdk\interfaces\interfaces.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\includes.h">
+    <ClInclude Include="source\libs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\globals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\sdk\CClientEntityList.h">
+    <ClInclude Include="source\valve\client\C_BaseCombatCharacter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\sdk\CEngineClient.h">
+    <ClInclude Include="source\valve\client\c_basecombatweapon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\C_BasePlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CBaseAnimating.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CClientEntityList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CCollisionProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CHLClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CInputSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\ClientClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\ClientModeShared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\ConCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\ConVar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CUniformRandomStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CViewRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\CViewSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\IGameMovement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\IPrediction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\client\usercmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CEngineClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CGameEventManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CIVDebugOverlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CMaterialSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CModelInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CModelRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CNetChan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\CVRenderView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\gametrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\iclientrenderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\IEngineTrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\imaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\inetmessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\IStudioRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\takedamageinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\engine\vmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier0\basetypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier0\Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier0\platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier0\shareddefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier0\soundinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier0\Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier1\bitbuf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier1\checksum_crc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier1\checksum_md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\tier1\KeyValues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\mathlib\math_pfns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\mathlib\mathlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\sdk\interfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hooks\hooks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\cheats\aimbot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\cheat.h">
+    <ClInclude Include="source\sdk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\utils\easing\easing.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\utils\easing\easing_dynamic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\vgui\ISurfaceV30.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\valve\vgui\VPanelWrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
