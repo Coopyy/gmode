@@ -26,5 +26,4 @@ public:
 	/*15*/	virtual void* AddTextOverlayRGB(Vector const&, int, float, float, float, float, float, char const*, ...) = 0;
 	/*16*/	virtual void* AddTextOverlayRGB(Vector const&, int, float, int, int, int, int, char const*, ...) = 0;
 	/*17*/	virtual void* AddLineOverlayAlpha(Vector const&, Vector const&, int, int, int, int, bool, float) = 0;
-	/*18*/	virtual void* AddBoxOverlay2(Vector const&, Vector const&, Vector const&, QAngle const&, Color const&, Color const&, float) = 0;
 };

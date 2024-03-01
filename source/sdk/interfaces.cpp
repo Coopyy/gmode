@@ -22,4 +22,10 @@ void interfaces::setup()
 
 	matSystemSurface = memory::getInterface<CMatSystemSurface>("vguimatsurface.dll", "VGUI_Surface030");
 	printf("[0x%p] matSystemSurface \n", matSystemSurface);
+
+	debugOverlay = memory::getInterface<CIVDebugOverlay>("engine.dll", "VDebugOverlay003");
+	printf("[0x%p] debugOverlay \n", debugOverlay);
+
+	modelInfo = memory::getInterface<CModelInfo>("engine.dll", "VModelInfoClient006");
+	printf("[0x%p] modelInfo \n", modelInfo);
 }

@@ -39,5 +39,5 @@ bool __stdcall hooks::CreateMove(void* cm, float frameTime, CUserCmd* cmd)
 	if (cmd && g::localPlayer)
 		aimbot::run(cmd);
 
-	return CreateMoveOriginal(cm, frameTime, cmd);;
+	return CreateMoveOriginal(cm, frameTime, cmd);
 }

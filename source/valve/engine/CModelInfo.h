@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../tier0/Vector.h"
+#include "CModelRender.h"
 
 struct mstudiobone_t
 {

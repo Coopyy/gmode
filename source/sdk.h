@@ -11,4 +11,8 @@
 
 #include "valve/vguimatsurface/CMatSystemSurface.h"
 
+#include "valve/engine/CIVDebugOverlay.h"
+
+#include "valve/engine/CModelInfo.h"
+
 #endif // !SDK_H

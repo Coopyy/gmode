@@ -21,6 +21,10 @@ namespace interfaces
 
 	inline CMatSystemSurface* matSystemSurface;
 
+	inline CIVDebugOverlay* debugOverlay;
+
+	inline CModelInfo* modelInfo;
+
 	void setup();
 }
 #endif // !INTERFACES_H 
